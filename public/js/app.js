@@ -1,1 +1,1 @@
-angular.module('todoApp', ['TodoCtrl']);
+angular.module('todoApp', ['todoApp.TodoCtrl']);

@@ -1,5 +1,5 @@
-angular.module('TodoCtrl', [])
-.controller('todoController', [
+angular.module('todoApp.TodoCtrl', [])
+.controller('TodoCtrl', [
     '$scope',
     function ($scope) {
       $scope.todos = [];
