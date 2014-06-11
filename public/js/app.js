@@ -1,1 +1,4 @@
-angular.module('todoApp', ['todoApp.TodoCtrl']);
+angular.module('todoApp', [
+  'ngResource',
+  'controllers.TodoCtrl'
+]);
