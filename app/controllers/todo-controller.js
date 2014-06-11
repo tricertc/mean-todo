@@ -1,5 +1,11 @@
+var mongoose = require('mongoose')
+  , Todo = mongoose.model('Todo');
+
 exports.list = function (req, res) {
-  res.jsonp({
-    "message": "Hello, world"
+  Todo.find(function (err, todos) {
+    if (err) {
+      res.send(err);
+    }
+    res.jsonp(todos);
   });
 };

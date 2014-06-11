@@ -1,5 +1,7 @@
+require('./models/todo');
+
 module.exports = function (app) {
-  // apply routes -------------------------------
+  // apply todo routes --------------------------
   require('./routes/todo-routes')(app);
 
   // default route ------------------------------
