@@ -14,13 +14,23 @@
         </div>
 
         <!-- Task List -->
-        <div class="row" ng-controller="TodoCtrl">
-            <div class="col-sm-offset-1 col-sm-8">
-                <ul class="list-group">
-                    <li class="list-group-item" ng-repeat="todo in todos">
-                        {{ todo.text }}
-                    </li>
-                </ul>
+        <div ng-controller="TodoCtrl">
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-8">
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="todo in todos">
+                            {{ todo.text }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <form class="horizontal" action="">
+                    <div class="form-group">
+                        <input class="form-control" type="text" ng-model="text" placeholder="New todo item..."/>
+                    </div>
+                    <button class="btn btn-primary pull-right" ng-click="add(text)">Add Todo</button>
+                </form>
             </div>
         </div>
         <!-- // Task List -->
