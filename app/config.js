@@ -1,6 +1,8 @@
 require('./models/todo');
 
 module.exports = function (app) {
+  app.use(require('body-parser')());
+
   // apply todo routes --------------------------
   require('./routes/todo-routes')(app);
 

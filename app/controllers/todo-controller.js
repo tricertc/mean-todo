@@ -9,3 +9,13 @@ exports.list = function (req, res) {
     res.jsonp(todos);
   });
 };
+
+exports.create = function (req, res) {
+  var todo = new Todo(req.body);
+  todo.save(function (err) {
+    if (err) {
+      res.send(err);
+    }
+    res.jsonp(todo);
+  });
+};
