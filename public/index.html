@@ -3,14 +3,36 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Todo List</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css"/>
 </head>
-<body>
+<body ng-app="todoApp">
 
 <div id="page">
-    <div class="header">
-        <h1>Todo List</h1>
+    <div class="container">
+        <div class="page-header">
+            <h1>Todo List</h1>
+        </div>
+
+        <!-- Task List -->
+        <div class="row" ng-controller="todoController">
+            <div class="col-sm-offset-1 col-sm-8">
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="todo in todos">
+                        {{ todo.text }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- // Task List -->
+
     </div>
 </div>
+
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="lib/angular/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/TodoCtrl.js"></script>
 
 </body>
 </html>

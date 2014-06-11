@@ -1,0 +1,20 @@
+{
+  "name": "todo",
+  "version": "0.0.0",
+  "authors": [
+    "Tim Rice <timrice@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.17",
+    "bootstrap": "~3.1.1"
+  }
+}
