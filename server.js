@@ -10,7 +10,7 @@ console.log('Connected to db @ ' + db.url);
 
 // configure server -----------------------------
 app.use(express.static(__dirname + '/public'));
-require('./app/config')(app);
+require('./config/config')(app);
 
 // start server ---------------------------------
 app.listen(port);
