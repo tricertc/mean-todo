@@ -17,5 +17,13 @@ angular.module('controllers.TodoCtrl', ['services.TodoService'])
         });
       };
 
+      $scope.update = function (todo) {
+        todo.$update(function (success) {
+          console.log('saved');
+        }, function (error) {
+          console.log(error);
+        });
+      };
+
     }
   ]);

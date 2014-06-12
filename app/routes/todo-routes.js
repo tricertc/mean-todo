@@ -6,4 +6,6 @@ module.exports = function (app) {
     .get(todos.list)
     .post(todos.create);
 
+  app.route('/todos/:id')
+    .put(todos.update);
 };
