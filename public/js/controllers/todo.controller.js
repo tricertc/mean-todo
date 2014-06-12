@@ -12,6 +12,7 @@ angular.module('controllers.TodoCtrl', ['services.TodoService'])
 
         todo.$save(function (success) {
           $scope.todos.push(todo);
+          delete $scope.text;
         }, function (error) {
           console.log(error);
         });
