@@ -20,6 +20,7 @@
                     <ul class="list-group">
                         <li class="list-group-item" ng-repeat="todo in todos" ng-class="{'list-group-item-info': !todo.completed, 'list-group-item-danger': todo.completed}">
                             {{ todo.text }}
+                            <input type="checkbox" class="pull-right" ng-model="todo.completed"/>
                         </li>
                     </ul>
                 </div>
