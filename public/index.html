@@ -16,16 +16,16 @@
         <!-- Task List -->
         <div ng-controller="TodoCtrl">
             <div class="row">
-                <div class="col-sm-offset-2 col-sm-8">
+                <div class="col-sm-offset-1 col-sm-9">
                     <ul class="list-group">
-                        <li class="list-group-item" ng-repeat="todo in todos">
+                        <li class="list-group-item" ng-repeat="todo in todos" ng-class="{'list-group-item-info': !todo.completed, 'list-group-item-danger': todo.completed}">
                             {{ todo.text }}
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="row">
-                <form class="horizontal" action="">
+                <form class="horizontal well col-sm-offset-1 col-sm-9" action="">
                     <div class="form-group">
                         <input class="form-control" type="text" ng-model="text" placeholder="New todo item..."/>
                     </div>
