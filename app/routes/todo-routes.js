@@ -7,5 +7,6 @@ module.exports = function (app) {
     .post(todos.create);
 
   app.route('/todos/:id')
-    .put(todos.update);
+    .put(todos.update)
+    .delete(todos.delete);
 };

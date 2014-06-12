@@ -36,3 +36,18 @@ exports.update = function (req, res) {
     });
   });
 };
+
+exports.delete = function (req, res) {
+  Todo.findById(req.params.id, function (err, todo) {
+    if (err) {
+      res.send(err);
+    }
+
+    todo.remove(function (err) {
+      if (err) {
+        res.send(err);
+      }
+      res.jsonp(todo);
+    })
+  });
+};

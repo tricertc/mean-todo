@@ -19,11 +19,19 @@ angular.module('controllers.TodoCtrl', ['services.TodoService'])
 
       $scope.update = function (todo) {
         todo.$update(function (success) {
-          console.log('saved');
         }, function (error) {
           console.log(error);
         });
       };
 
+      $scope.remove = function (todo) {
+        todo.$remove();
+
+        for (var i in $scope.todos) {
+          if ($scope.todos[i] === todo) {
+            $scope.todos.splice(i, 1);
+          }
+        }
+      };
     }
   ]);
